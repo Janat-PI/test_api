@@ -12,6 +12,11 @@ ALLOWED_HOSTS = []
 
 
 INSTALLED_APPS = [
+
+    # my apps
+    'src.api',
+    'src.users',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -19,9 +24,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # my apps
-    'src.api',
-    'src.users',
+
 
 
     # my libs
@@ -97,6 +100,10 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'static'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
