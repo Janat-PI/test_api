@@ -8,7 +8,7 @@ SECRET_KEY = config('SECRET_KEY')
 
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 INSTALLED_APPS = [
@@ -16,19 +16,19 @@ INSTALLED_APPS = [
     # my apps
     'src.api',
     'src.users',
+    'src.joke',
 
+    # my libs
+    'rest_framework',
+    'corsheaders',
+
+    # default apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-
-
-
-    # my libs
-    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -42,6 +42,11 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'core.urls'
+
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:8080",
+#     "http://127.0.0.1:9000",
+# ]
 
 TEMPLATES = [
     {

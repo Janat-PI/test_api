@@ -11,3 +11,5 @@ class ListToDo(ListAPIView):
 class DetailToDo(RetrieveAPIView):
     queryset = ToDo.objects.filter(is_published=True)
     serializer_class = ToDoSerializer
+
+

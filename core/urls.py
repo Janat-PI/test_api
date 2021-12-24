@@ -6,6 +6,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('todo/', include('src.api.urls')),
+    path('', include('src.joke.urls'))
 ]
 
 if settings.DEBUG:
